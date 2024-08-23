@@ -19,10 +19,6 @@ Twilio/Alternative BSP: If using a BSP like Twilio, you will need an account and
 Installation
 Clone the Repository:
 
-bash
-Copy code
-git clone https://github.com/your-repo/client-management-system.git
-cd client-management-system
 Install Dependencies:
 
 bash
