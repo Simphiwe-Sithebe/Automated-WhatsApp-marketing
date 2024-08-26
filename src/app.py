@@ -93,9 +93,15 @@ def check_birthdays():
     conn.close()
 
 if __name__ == '__main__':
-    # Schedule the birthday check task to run daily at 7 AM
-    scheduler.add_job(func=check_birthdays, trigger="cron", hour=7, timezone=pytz.timezone("Africa/Johannesburg"))
-    scheduler.start()
+ # Schedule the birthday check task to run daily at 7 AM
+    scheduler.add_job(
+        func=check_birthdays,
+        trigger="cron",
+        hour=7,
+        timezone=pytz.timezone("Africa/Johannesburg"),
+        id='birthday_check'  # Adding a unique id for the job
+    )
+scheduler.start()
 
     # Start the Flask application
-    app.run(debug=True) 
+app.run(debug=True)
